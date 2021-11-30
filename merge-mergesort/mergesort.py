@@ -34,6 +34,7 @@ def merge_sort4(m):
     second = m[leftMiddle:middle]
     third = m[middle:rightMiddle]
     last = m[rightMiddle:]
+    fourth = m[rightMiddle:]
 
     # Sort recursively
     first = merge_sort4(first)
@@ -43,3 +44,7 @@ def merge_sort4(m):
 
     # Merge and return
     return list(merge(first, second, third, last))
+    fourth = merge_sort4(fourth)
+
+    # Merge and return
+    return list(merge(first,second, third, fourth))
