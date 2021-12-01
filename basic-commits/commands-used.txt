@@ -1,0 +1,25 @@
+mkdir git-katas
+git init
+git remote add origin https://github.com/ashish4zemoso/git-assignment.git
+git pull origin master
+git status
+git log
+echo 'this is a newfile in master branch' > newfile.txt
+git status
+git commit -m "commit newfile to master"
+git status
+echo 'added this second line as a change to newfile' >> newfile.txt
+git status
+git add newfile.txt
+git status
+echo 'making yet another change to this newfile on third line' >> newfile.txt
+git commit -m "change newfile.txt by adding contents on newline"
+git status
+git log
+git add newfile.txt
+git commit -m "change newfile by adding new contents on third line"
+git log --oneline --graph
+git log -n 5
+git pull origin master
+git push origin 
+exit
